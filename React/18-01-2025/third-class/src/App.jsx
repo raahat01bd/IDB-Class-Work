@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Sidebar from "./components/Sidebar"
 import Home from "./pages/Home"
+import Destructire from "./pages/Destructure"
 // import Footer from "./components/Footer"
 // import About from "./components/About"
 // import Contact from "./components/Contact"
@@ -22,7 +23,8 @@ function App() {
       
     <Routes>
 
-    <Route path="/public/dist/pages/index.html" element={<Home />} />
+    <Route path="/home" element={<Home />} />
+    <Route path="/" element={<Destructire />} />
 
     
     </Routes>

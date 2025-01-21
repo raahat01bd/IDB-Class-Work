@@ -1,17 +1,24 @@
-function Home(){
+import  { useState } from 'react';
+
+function Home() {
+    const [price, setPrice] = useState(0);  // Define state here
+
+    const increase = () => {
+        setPrice(price + 1);  // Increment the price by 1
+    }
+
+    const decrease = () => {
+        setPrice(price - 1);  // Decrement the price by 1
+    }
+    
+
     return (
         <div>
-            <h1>Contact Page</h1>
-            <p>Welcome to our blog page!</p>
-            <ul>
-                <li>Article 1</li>
-                <li>Article 2</li>
-                <li>Article 3</li>
-            </ul>
-            <hr />
+            Count = {price}
+            <button onClick={increase}>Increase</button>
+            <button onClick={decrease}>Decrease</button>
         </div>
     );
-
 }
 
 export default Home;
